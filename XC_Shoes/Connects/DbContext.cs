@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DoAn_QLPM_CafeTrungNguyen.Models
+namespace XC_Shoes.Connects
 {
     class DbContext
     {
