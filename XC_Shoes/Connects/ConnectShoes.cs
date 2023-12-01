@@ -13,7 +13,7 @@ namespace XC_Shoes.Connects
         public List<Models.Shoes> getShoesData(String Gender)
         {
             List<Models.Shoes> listEmployee = new List<Shoes>();
-            string sql = "SELECT S.IconID, S.ShoesID,SD.TypeShoesID,SD.Name,S.StyleType,TS.Name,count(CD.ColourID) as 'Number_Colour',S.Price,S.Discount FROM Shoes S,Shoes_Details SD,Type_Shoes TS,Colour_Detail CD WHERE S.ShoesID = SD.ShoesID AND SD.TypeShoesID = TS.TypeShoesID AND S.ShoesID = CD.ShoesID GROUP BY S.IconID, S.ShoesID,SD.TypeShoesID,SD.Name,S.StyleType,TS.Name,S.Price,S.Discount HAVING StyleType = '"+ Gender +"'";
+            string sql = "SELECT * FROM dbo.ShowShoesPage('"+ Gender +"')";
             SqlDataReader rdr = db.ExcuteQuery(sql);
             while (rdr.Read())
             {
