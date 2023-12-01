@@ -4,13 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-<<<<<<< HEAD
 using XC_Shoes.API;
-
-=======
 using XC_Shoes.Connects;
 using XC_Shoes.Models;
->>>>>>> 0da3ae7ac7451c3fdd20eb00f89e7995e6a993e5
+
 namespace XC_Shoes.Controllers
 {
     public class UserController : Controller
