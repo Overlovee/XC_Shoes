@@ -232,13 +232,18 @@
   <ItemGroup>
     <Compile Include="API\GoogleDriveAPI.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Connects\ConnectIcons.cs" />
     <Compile Include="Connects\ConnectShoes.cs" />
+    <Compile Include="Connects\ConnectTypeShoes.cs" />
     <Compile Include="Connects\DbContext.cs" />
+    <Compile Include="Controllers\ShoesController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Shoe.cs" />
+    <Compile Include="Models\Icons.cs" />
+    <Compile Include="Models\TypeShoes.cs" />
+    <Compile Include="Models\Shoes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -253,7 +258,13 @@
     <Content Include="Views\Shared\header.cshtml" />
     <Content Include="Views\Shared\_LayoutPage.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
+<<<<<<< HEAD
     <Content Include="Resources\Shoes\SP1-MenShoes-2-Nike Pegasus 40\SP1-MenShoes-2-Nike Pegasus 40-Side1.webp" />
+=======
+    <Content Include="Views\User\ShoesPage.cshtml" />
+    <Content Include="Views\Shoes\TypeShoesPartial.cshtml" />
+    <Content Include="Views\Shoes\IconsPartial.cshtml" />
+>>>>>>> 0da3ae7ac7451c3fdd20eb00f89e7995e6a993e5
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
