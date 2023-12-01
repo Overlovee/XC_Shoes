@@ -43,7 +43,36 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Google.Apis, Version=1.64.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.64.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.64.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.64.0\lib\net461\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.Mvc, Version=1.62.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.Mvc.1.62.0\lib\net45\Google.Apis.Auth.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.64.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.64.0\lib\net461\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.64.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.64.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Drive.v3, Version=1.64.0.3155, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Drive.v3.1.64.0.3155\lib\net45\Google.Apis.Drive.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.64.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.64.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.CodeDom, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.CodeDom.7.0.0\lib\net462\System.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -93,9 +122,115 @@
     <Content Include="Content\API_GoogleDrive.js" />
     <Content Include="Content\site.css" />
     <Content Include="Global.asax" />
+    <Content Include="Resources\Account\z4263646737653_b71c2a8b1f0f08aedc2b8fb8c85dfe12.jpg" />
+    <Content Include="Resources\Shoes\AF1-MenShoes-2-Nike Air Force %2707\AF1-MenShoes-2-Nike Air Force 1 %2707-AVT.jpg" />
+    <Content Include="Resources\Shoes\AF1-MenShoes-2-Nike Air Force %2707\AF1-MenShoes-2-Nike Air Force 1 %2707-Side1.jpg" />
+    <Content Include="Resources\Shoes\AF1-MenShoes-2-Nike Air Force %2707\AF1-MenShoes-2-Nike Air Force 1 %2707-Side2.jpg" />
+    <Content Include="Resources\Shoes\AF1-MenShoes-3-Nike Air Force 1 %2707\AF1-MenShoes-3-Nike Air Force 1 %2707-AVT.jpg" />
+    <Content Include="Resources\Shoes\AF1-MenShoes-3-Nike Air Force 1 %2707\AF1-MenShoes-3-Nike Air Force 1 %2707-Side1.jpg" />
+    <Content Include="Resources\Shoes\AF1-MenShoes-3-Nike Air Force 1 %2707\AF1-MenShoes-3-Nike Air Force 1 %2707-Side2.jpg" />
+    <Content Include="Resources\Shoes\AF1-MenShoes-4-Nike Air Force 1 %2707\AF1-MenShoes-4-Nike Air Force 1 %2707-AVT.jpg" />
+    <Content Include="Resources\Shoes\AF1-MenShoes-4-Nike Air Force 1 %2707\AF1-MenShoes-4-Nike Air Force 1 %2707-Side1.jpg" />
+    <Content Include="Resources\Shoes\AF1-MenShoes-4-Nike Air Force 1 %2707\AF1-MenShoes-4-Nike Air Force 1 %2707-Side2.jpg" />
+    <Content Include="Resources\Shoes\AF2-MenShoes-1-Nike Air Force 1  Mid\AF2-MenShoes-1-Nike Air Force 1  Mid-AVT.jpg" />
+    <Content Include="Resources\Shoes\AF2-MenShoes-1-Nike Air Force 1  Mid\AF2-MenShoes-1-Nike Air Force 1  Mid-Side1.jpg" />
+    <Content Include="Resources\Shoes\AF2-MenShoes-1-Nike Air Force 1  Mid\AF2-MenShoes-1-Nike Air Force 1  Mid-Side2.jpg" />
+    <Content Include="Resources\Shoes\AF2-MenShoes-2-Nike Air Force 1  Mid\AF2-MenShoes-2-Nike Air Force 1  Mid-AVT.jpg" />
+    <Content Include="Resources\Shoes\AF2-MenShoes-2-Nike Air Force 1  Mid\AF2-MenShoes-2-Nike Air Force 1  Mid-Side1.jpg" />
+    <Content Include="Resources\Shoes\AF2-MenShoes-2-Nike Air Force 1  Mid\AF2-MenShoes-2-Nike Air Force 1  Mid-Side2.jpg" />
+    <Content Include="Resources\Shoes\AF2-MenShoes-5-Nike Air Force 1  Mid\AF2-MenShoes-5-Nike Air Force 1  Mid-AVT.jpg" />
+    <Content Include="Resources\Shoes\AF2-MenShoes-5-Nike Air Force 1  Mid\AF2-MenShoes-5-Nike Air Force 1  Mid-Side1.jpg" />
+    <Content Include="Resources\Shoes\AF2-MenShoes-5-Nike Air Force 1  Mid\AF2-MenShoes-5-Nike Air Force 1  Mid-Side2.jpg" />
+    <Content Include="Resources\Shoes\AF3-WomenShoes-4-Nike Air Force 1  Low\AF3-WomenShoes-4-Nike Air Force 1  Low-AVT.jpg" />
+    <Content Include="Resources\Shoes\AF3-WomenShoes-4-Nike Air Force 1  Low\AF3-WomenShoes-4-Nike Air Force 1  Low-Side1.jpg" />
+    <Content Include="Resources\Shoes\AF3-WomenShoes-4-Nike Air Force 1  Low\AF3-WomenShoes-4-Nike Air Force 1  Low-Side2.jpg" />
+    <Content Include="Resources\Shoes\AF3-WomenShoes-6-Nike Air Force 1  Low\AF3-WomenShoes-6-Nike Air Force 1  Low-AVT.jpg" />
+    <Content Include="Resources\Shoes\AF3-WomenShoes-6-Nike Air Force 1  Low\AF3-WomenShoes-6-Nike Air Force 1  Low-Side1.jpg" />
+    <Content Include="Resources\Shoes\AF3-WomenShoes-6-Nike Air Force 1  Low\AF3-WomenShoes-6-Nike Air Force 1  Low-Side2.jpg" />
+    <Content Include="Resources\Shoes\AF3-WomenShoes-7-Nike Air Force 1  Low\AF3-WomenShoes-7-Nike Air Force 1  Low By You-AVT.jpg" />
+    <Content Include="Resources\Shoes\AF3-WomenShoes-7-Nike Air Force 1  Low\AF3-WomenShoes-7-Nike Air Force 1  Low By You-Side1.jpg" />
+    <Content Include="Resources\Shoes\AF3-WomenShoes-7-Nike Air Force 1  Low\AF3-WomenShoes-7-Nike Air Force 1  Low By You-Side2.jpg" />
+    <Content Include="Resources\Shoes\AM1-MenShoes-2-Nike Air Max 97\AM1-MenShoes-2-Nike Air Max 97-AVT.jpg" />
+    <Content Include="Resources\Shoes\AM1-MenShoes-2-Nike Air Max 97\AM1-MenShoes-2-Nike Air Max 97-Side1.jpg" />
+    <Content Include="Resources\Shoes\AM1-MenShoes-2-Nike Air Max 97\AM1-MenShoes-2-Nike Air Max 97-Side2.jpg" />
+    <Content Include="Resources\Shoes\AM1-MenShoes-5-Nike Air Max 97\AM1-MenShoes-5-Nike Air Max 97-AVT.jpg" />
+    <Content Include="Resources\Shoes\AM1-MenShoes-5-Nike Air Max 97\AM1-MenShoes-5-Nike Air Max 97-Side1.jpg" />
+    <Content Include="Resources\Shoes\AM1-MenShoes-5-Nike Air Max 97\AM1-MenShoes-5-Nike Air Max 97-Side2.jpg" />
+    <Content Include="Resources\Shoes\AM1-MenShoes-7-Nike Air Max 97\AM1-MenShoes-7-Nike Air Max 97-AVT.jpg" />
+    <Content Include="Resources\Shoes\AM1-MenShoes-7-Nike Air Max 97\AM1-MenShoes-7-Nike Air Max 97-Side1.jpg" />
+    <Content Include="Resources\Shoes\AM1-MenShoes-7-Nike Air Max 97\AM1-MenShoes-7-Nike Air Max 97-Side2.jpg" />
+    <Content Include="Resources\Shoes\AM2-MenShoes-1-Nike Air Max 90\AM2-MenShoes-1-Nike Air Max 90-AVT.jpg" />
+    <Content Include="Resources\Shoes\AM2-MenShoes-1-Nike Air Max 90\AM2-MenShoes-1-Nike Air Max 90-Side1.jpg" />
+    <Content Include="Resources\Shoes\AM2-MenShoes-1-Nike Air Max 90\AM2-MenShoes-1-Nike Air Max 90-Side2.jpg" />
+    <Content Include="Resources\Shoes\AM2-MenShoes-2-Nike Air Max 90\AM2-MenShoes-2-Nike Air Max 90-AVT.jpg" />
+    <Content Include="Resources\Shoes\AM2-MenShoes-2-Nike Air Max 90\AM2-MenShoes-2-Nike Air Max 90-Side1.jpg" />
+    <Content Include="Resources\Shoes\AM2-MenShoes-2-Nike Air Max 90\AM2-MenShoes-2-Nike Air Max 90-Side2.jpg" />
+    <Content Include="Resources\Shoes\AM2-MenShoes-3-Nike Air Max 90\AM2-MenShoes-3-Nike Air Max 90-AVT.jpg" />
+    <Content Include="Resources\Shoes\AM2-MenShoes-3-Nike Air Max 90\AM2-MenShoes-3-Nike Air Max 90-Side1.jpg" />
+    <Content Include="Resources\Shoes\AM2-MenShoes-3-Nike Air Max 90\AM2-MenShoes-3-Nike Air Max 90-Side2.jpg" />
+    <Content Include="Resources\Shoes\AM3-WomenShoes-12-Nike Air Max 90 Futura\AM3-WomenShoes-12-Nike Air Max 90 Futura-AVT.jpg" />
+    <Content Include="Resources\Shoes\AM3-WomenShoes-12-Nike Air Max 90 Futura\AM3-WomenShoes-12-Nike Air Max 90 Futura-Side1.jpg" />
+    <Content Include="Resources\Shoes\AM3-WomenShoes-12-Nike Air Max 90 Futura\AM3-WomenShoes-12-Nike Air Max 90 Futura-Side2.jpg" />
+    <Content Include="Resources\Shoes\AM3-WomenShoes-5-Nike Air Max 90 Futura\AM3-WomenShoes-5-Nike Air Max 90 Futura-AVT.jpg" />
+    <Content Include="Resources\Shoes\AM3-WomenShoes-5-Nike Air Max 90 Futura\AM3-WomenShoes-5-Nike Air Max 90 Futura-Side1.jpg" />
+    <Content Include="Resources\Shoes\AM3-WomenShoes-5-Nike Air Max 90 Futura\AM3-WomenShoes-5-Nike Air Max 90 Futura-Side2.jpg" />
+    <Content Include="Resources\Shoes\AM3-WomenShoes-6-Nike Air Max 90 Futura\AM3-WomenShoes-6-Nike Air Max 90 Futura-AVT.jpg" />
+    <Content Include="Resources\Shoes\AM3-WomenShoes-6-Nike Air Max 90 Futura\AM3-WomenShoes-6-Nike Air Max 90 Futura-Side1.jpg" />
+    <Content Include="Resources\Shoes\AM3-WomenShoes-6-Nike Air Max 90 Futura\AM3-WomenShoes-6-Nike Air Max 90 Futura-Side2.jpg" />
+    <Content Include="Resources\Shoes\JD1-MenShoes-2-Air Jordan 1 Low\JD1-MenShoes-2-Air Jordan 1 Low-AVT.jpg" />
+    <Content Include="Resources\Shoes\JD1-MenShoes-2-Air Jordan 1 Low\JD1-MenShoes-2-Air Jordan 1 Low-Side1.jpg" />
+    <Content Include="Resources\Shoes\JD1-MenShoes-2-Air Jordan 1 Low\JD1-MenShoes-2-Air Jordan 1 Low-Side2.jpg" />
+    <Content Include="Resources\Shoes\JD1-MenShoes-3-Air Jordan 1 Low\JD1-MenShoes-3-Air Jordan 1 Low-AVT.jpg" />
+    <Content Include="Resources\Shoes\JD1-MenShoes-3-Air Jordan 1 Low\JD1-MenShoes-3-Air Jordan 1 Low-Side1.jpg" />
+    <Content Include="Resources\Shoes\JD1-MenShoes-3-Air Jordan 1 Low\JD1-MenShoes-3-Air Jordan 1 Low-Side2.jpg" />
+    <Content Include="Resources\Shoes\JD2-MenShoes-2-Air Jordan 1 Mid\JD2-MenShoes-2-Air Jordan 1 Mid-AVT.jpg" />
+    <Content Include="Resources\Shoes\JD2-MenShoes-2-Air Jordan 1 Mid\JD2-MenShoes-2-Air Jordan 1 Mid-Side1.jpg" />
+    <Content Include="Resources\Shoes\JD2-MenShoes-2-Air Jordan 1 Mid\JD2-MenShoes-2-Air Jordan 1 Mid-Side2.jpg" />
+    <Content Include="Resources\Shoes\JD2-MenShoes-6-Air Jordan 1 Low\JD1-MenShoes-12-Air Jordan 1 Low-AVT.jpg" />
+    <Content Include="Resources\Shoes\JD2-MenShoes-6-Air Jordan 1 Low\JD1-MenShoes-12-Air Jordan 1 Low-Side1.jpg" />
+    <Content Include="Resources\Shoes\JD2-MenShoes-6-Air Jordan 1 Low\JD1-MenShoes-12-Air Jordan 1 Low-Side2.jpg" />
+    <Content Include="Resources\Shoes\JD2-MenShoes-7-Air Jordan 1 Mid\JD2-MenShoes-7-Air Jordan 1 Mid-AVT.jpg" />
+    <Content Include="Resources\Shoes\JD2-MenShoes-7-Air Jordan 1 Mid\JD2-MenShoes-7-Air Jordan 1 Mid-Side1.jpg" />
+    <Content Include="Resources\Shoes\JD2-MenShoes-7-Air Jordan 1 Mid\JD2-MenShoes-7-Air Jordan 1 Mid-Side2.jpg" />
+    <Content Include="Resources\Shoes\JD3-WomenShoes-10-Air Jordan 1 Mid\JD3-WomenShoes-10-Air Jordan 1 Mid-AVT.jpg" />
+    <Content Include="Resources\Shoes\JD3-WomenShoes-10-Air Jordan 1 Mid\JD3-WomenShoes-10-Air Jordan 1 Mid-Side1.jpg" />
+    <Content Include="Resources\Shoes\JD3-WomenShoes-10-Air Jordan 1 Mid\JD3-WomenShoes-10-Air Jordan 1 Mid-Side2.jpg" />
+    <Content Include="Resources\Shoes\JD3-WomenShoes-4-Air Jordan 1 Mid\JD3-WomenShoes-4-Air Jordan 1 Mid-AVT.jpg" />
+    <Content Include="Resources\Shoes\JD3-WomenShoes-4-Air Jordan 1 Mid\JD3-WomenShoes-4-Air Jordan 1 Mid-Side1.jpg" />
+    <Content Include="Resources\Shoes\JD3-WomenShoes-4-Air Jordan 1 Mid\JD3-WomenShoes-4-Air Jordan 1 Mid-Side2.jpg" />
+    <Content Include="Resources\Shoes\JD3-WomenShoes-6-Air Jordan 1 Mid\JD3-WomenShoes-6-Air Jordan 1 Mid-AVT.jpg" />
+    <Content Include="Resources\Shoes\JD3-WomenShoes-6-Air Jordan 1 Mid\JD3-WomenShoes-6-Air Jordan 1 Mid-Side1.jpg" />
+    <Content Include="Resources\Shoes\JD3-WomenShoes-6-Air Jordan 1 Mid\JD3-WomenShoes-6-Air Jordan 1 Mid-Side2.jpg" />
+    <Content Include="Resources\Shoes\SP1-MenShoes-1-Nike Pegasus 40\SP1-MenShoes-1-Nike Pegasus 40-AVT.jpg" />
+    <Content Include="Resources\Shoes\SP1-MenShoes-1-Nike Pegasus 40\SP1-MenShoes-1-Nike Pegasus 40-Side1.jpg" />
+    <Content Include="Resources\Shoes\SP1-MenShoes-1-Nike Pegasus 40\SP1-MenShoes-1-Nike Pegasus 40-Side2.jpg" />
+    <Content Include="Resources\Shoes\SP1-MenShoes-2-Nike Pegasus 40\SP1-MenShoes-2-Nike Pegasus 40-AVT.jpg" />
+    <Content Include="Resources\Shoes\SP1-MenShoes-2-Nike Pegasus 40\SP1-MenShoes-2-Nike Pegasus 40-Side2.jpg" />
+    <Content Include="Resources\Shoes\SP1-MenShoes-3-Nike Pegasus 40\SP1-MenShoes-3-Nike Pegasus 40-AVT.jpg" />
+    <Content Include="Resources\Shoes\SP1-MenShoes-3-Nike Pegasus 40\SP1-MenShoes-3-Nike Pegasus 40-Side1.jpg" />
+    <Content Include="Resources\Shoes\SP1-MenShoes-3-Nike Pegasus 40\SP1-MenShoes-3-Nike Pegasus 40-Side2.jpg" />
+    <Content Include="Resources\Shoes\SP2-MenShoes-3-Nike Structure 25\SP2-MenShoes-3-Nike Structure 25-AVT.jpg" />
+    <Content Include="Resources\Shoes\SP2-MenShoes-3-Nike Structure 25\SP2-MenShoes-3-Nike Structure 25-Side1.jpg" />
+    <Content Include="Resources\Shoes\SP2-MenShoes-3-Nike Structure 25\SP2-MenShoes-3-Nike Structure 25-Side2.jpg" />
+    <Content Include="Resources\Shoes\SP2-MenShoes-4-Nike Structure 25\SP2-MenShoes-4-Nike Structure 25-AVT.jpg" />
+    <Content Include="Resources\Shoes\SP2-MenShoes-4-Nike Structure 25\SP2-MenShoes-4-Nike Structure 25-Side1.jpg" />
+    <Content Include="Resources\Shoes\SP2-MenShoes-4-Nike Structure 25\SP2-MenShoes-4-Nike Structure 25-Side2.jpg" />
+    <Content Include="Resources\Shoes\SP2-MenShoes-8-Nike Structure 25\SP2-MenShoes-8-Nike Structure 25-AVT.jpg" />
+    <Content Include="Resources\Shoes\SP2-MenShoes-8-Nike Structure 25\SP2-MenShoes-8-Nike Structure 25-Side1.jpg" />
+    <Content Include="Resources\Shoes\SP2-MenShoes-8-Nike Structure 25\SP2-MenShoes-8-Nike Structure 25-Side2.jpg" />
+    <Content Include="Resources\Shoes\SP3-WomenShoes-2-Nike Infinity 4\SP3-WomenShoes-2-Nike Infinity 4-AVT.jpg" />
+    <Content Include="Resources\Shoes\SP3-WomenShoes-2-Nike Infinity 4\SP3-WomenShoes-2-Nike Infinity 4-Side1.jpg" />
+    <Content Include="Resources\Shoes\SP3-WomenShoes-2-Nike Infinity 4\SP3-WomenShoes-2-Nike Infinity 4-Side2.jpg" />
+    <Content Include="Resources\Shoes\SP3-WomenShoes-3-Nike Infinity 4\SP3-WomenShoes-3-Nike Infinity 4-AVT.jpg" />
+    <Content Include="Resources\Shoes\SP3-WomenShoes-3-Nike Infinity 4\SP3-WomenShoes-3-Nike Infinity 4-Side1.jpg" />
+    <Content Include="Resources\Shoes\SP3-WomenShoes-3-Nike Infinity 4\SP3-WomenShoes-3-Nike Infinity 4-Side2.jpg" />
+    <Content Include="Resources\Shoes\SP3-WomenShoes-6-Nike Infinity 4\SP3-WomenShoes-6-Nike Infinity 4-AVT.jpg" />
+    <Content Include="Resources\Shoes\SP3-WomenShoes-6-Nike Infinity 4\SP3-WomenShoes-6-Nike Infinity 4-Side1.jpg" />
+    <Content Include="Resources\Shoes\SP3-WomenShoes-6-Nike Infinity 4\SP3-WomenShoes-6-Nike Infinity 4-Side2.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\GoogleDriveAPI.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Connects\ConnectShoes.cs" />
     <Compile Include="Connects\DbContext.cs" />
@@ -118,6 +253,7 @@
     <Content Include="Views\Shared\header.cshtml" />
     <Content Include="Views\Shared\_LayoutPage.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Resources\Shoes\SP1-MenShoes-2-Nike Pegasus 40\SP1-MenShoes-2-Nike Pegasus 40-Side1.webp" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

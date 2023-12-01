@@ -11,7 +11,7 @@ const path = require('path');
 const fs = require('fs');
 
 const CLIENT_ID = '1069009233830-io2h6ifsm0ab464nqsg0b0grl9voc964.apps.googleusercontent.com';
-const CLIENT_SECRET = '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';
+const CLIENT_SECRET = '1069009233830-io2h6ifsm0ab464nqsg0b0grl9voc964.apps.googleusercontent.com';
 const REDIRECT_URI = 'https://developers.google.com/oauthplayground';
 
 const REFRESH_TOKEN = '1//04-EXI0oSDJvzCgYIARAAGAQSNwF-L9Ir0hC_2tco9b5FiIk_YNsisACuk2p6fO42CzNUxn6vGHRNK8DjKEXKv70xJUeA7ERrBeU';
