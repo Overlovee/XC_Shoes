@@ -121,11 +121,12 @@
     <Content Include="Content\admin_site.css" />
     <Content Include="Content\API_GoogleDrive.js" />
     <Content Include="Content\site.css" />
+    <Content Include="Databases\DB_ShoesStore.sql" />
     <Content Include="Global.asax" />
     <Content Include="Resources\Account\z4263646737653_b71c2a8b1f0f08aedc2b8fb8c85dfe12.jpg" />
-    <Content Include="Resources\Shoes\AF1-MenShoes-2-Nike Air Force %2707\AF1-MenShoes-2-Nike Air Force 1 %2707-AVT.jpg" />
-    <Content Include="Resources\Shoes\AF1-MenShoes-2-Nike Air Force %2707\AF1-MenShoes-2-Nike Air Force 1 %2707-Side1.jpg" />
-    <Content Include="Resources\Shoes\AF1-MenShoes-2-Nike Air Force %2707\AF1-MenShoes-2-Nike Air Force 1 %2707-Side2.jpg" />
+    <Content Include="Resources\Shoes\AF1-MenShoes-2-Nike Air Force 1 %2707\AF1-MenShoes-2-Nike Air Force 1 %2707-AVT.jpg" />
+    <Content Include="Resources\Shoes\AF1-MenShoes-2-Nike Air Force 1 %2707\AF1-MenShoes-2-Nike Air Force 1 %2707-Side1.jpg" />
+    <Content Include="Resources\Shoes\AF1-MenShoes-2-Nike Air Force 1 %2707\AF1-MenShoes-2-Nike Air Force 1 %2707-Side2.jpg" />
     <Content Include="Resources\Shoes\AF1-MenShoes-3-Nike Air Force 1 %2707\AF1-MenShoes-3-Nike Air Force 1 %2707-AVT.jpg" />
     <Content Include="Resources\Shoes\AF1-MenShoes-3-Nike Air Force 1 %2707\AF1-MenShoes-3-Nike Air Force 1 %2707-Side1.jpg" />
     <Content Include="Resources\Shoes\AF1-MenShoes-3-Nike Air Force 1 %2707\AF1-MenShoes-3-Nike Air Force 1 %2707-Side2.jpg" />
@@ -186,9 +187,9 @@
     <Content Include="Resources\Shoes\JD2-MenShoes-2-Air Jordan 1 Mid\JD2-MenShoes-2-Air Jordan 1 Mid-AVT.jpg" />
     <Content Include="Resources\Shoes\JD2-MenShoes-2-Air Jordan 1 Mid\JD2-MenShoes-2-Air Jordan 1 Mid-Side1.jpg" />
     <Content Include="Resources\Shoes\JD2-MenShoes-2-Air Jordan 1 Mid\JD2-MenShoes-2-Air Jordan 1 Mid-Side2.jpg" />
-    <Content Include="Resources\Shoes\JD2-MenShoes-6-Air Jordan 1 Low\JD1-MenShoes-12-Air Jordan 1 Low-AVT.jpg" />
-    <Content Include="Resources\Shoes\JD2-MenShoes-6-Air Jordan 1 Low\JD1-MenShoes-12-Air Jordan 1 Low-Side1.jpg" />
-    <Content Include="Resources\Shoes\JD2-MenShoes-6-Air Jordan 1 Low\JD1-MenShoes-12-Air Jordan 1 Low-Side2.jpg" />
+    <Content Include="Resources\Shoes\JD2-MenShoes-6-Air Jordan 1 Mid\JD1-MenShoes-12-Air Jordan 1 Low-AVT.jpg" />
+    <Content Include="Resources\Shoes\JD2-MenShoes-6-Air Jordan 1 Mid\JD1-MenShoes-12-Air Jordan 1 Low-Side1.jpg" />
+    <Content Include="Resources\Shoes\JD2-MenShoes-6-Air Jordan 1 Mid\JD1-MenShoes-12-Air Jordan 1 Low-Side2.jpg" />
     <Content Include="Resources\Shoes\JD2-MenShoes-7-Air Jordan 1 Mid\JD2-MenShoes-7-Air Jordan 1 Mid-AVT.jpg" />
     <Content Include="Resources\Shoes\JD2-MenShoes-7-Air Jordan 1 Mid\JD2-MenShoes-7-Air Jordan 1 Mid-Side1.jpg" />
     <Content Include="Resources\Shoes\JD2-MenShoes-7-Air Jordan 1 Mid\JD2-MenShoes-7-Air Jordan 1 Mid-Side2.jpg" />
@@ -244,12 +245,11 @@
     </Compile>
     <Compile Include="Models\Icons.cs" />
     <Compile Include="Models\TypeShoes.cs" />
-    <Compile Include="Models\Shoes.cs" />
+    <Compile Include="Models\Shoe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <Content Include="Databases\DB_ShoesStore" />
     <Content Include="Databases\DB_ShoesStore.bacpac" />
     <Content Include="Credentials\credentials.json" />
     <None Include="packages.config" />
@@ -264,6 +264,8 @@
     <Content Include="Views\User\ShoesPage.cshtml" />
     <Content Include="Views\Shoes\TypeShoesPartial.cshtml" />
     <Content Include="Views\Shoes\IconsPartial.cshtml" />
+    <Content Include="Views\Admin\Home.cshtml" />
+    <Content Include="Views\Admin\ManageProduct.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -273,7 +275,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

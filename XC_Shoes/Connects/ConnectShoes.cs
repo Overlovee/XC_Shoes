@@ -5,15 +5,17 @@ using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 using XC_Shoes.Models;
+using System.IO;
+
 namespace XC_Shoes.Connects
 {
     public class ConnectShoes
     {
         DbContext db = new DbContext();
-        public List<Models.Shoes> getShoesData(String Gender)
+        //string projectDirectory = System.Web.Hosting.HostingEnvironment.MapPath("~");
+        public List<Models.Shoe> getShoesData(string Gender)
         {
-<<<<<<< HEAD
-            List<Models.Shoes> list = new List<Shoes>();
+            List<Models.Shoe> list = new List<Shoe>();
             string sql = "SELECT S.IconID, " +
                 "S.ShoesID, " +
                 "SD.TypeShoesID, " +
@@ -29,14 +31,10 @@ namespace XC_Shoes.Connects
                 "AND S.ShoesID = CD.ShoesID " +
                 "GROUP BY S.IconID, S.ShoesID, SD.TypeShoesID, SD.Name, S.StyleType, TS.Name, S.Price, S.Discount " +
                 "HAVING StyleType = '" + Gender + "'";
-=======
-            List<Models.Shoes> listEmployee = new List<Shoes>();
-            string sql = "SELECT * FROM dbo.ShowShoesPage('"+ Gender +"')";
->>>>>>> 306ca26beba4f1b7127b325f33dada825ffe8b1d
             SqlDataReader rdr = db.ExcuteQuery(sql);
             while (rdr.Read())
             {
-                Shoes emp = new Shoes();
+                Shoe emp = new Shoe();
                 emp.IconID = rdr.GetValue(0).ToString();
                 emp.ShoesID = rdr.GetValue(1).ToString();
                 emp.TypeShoesID = Convert.ToInt32(rdr.GetValue(2).ToString());
@@ -52,10 +50,10 @@ namespace XC_Shoes.Connects
             rdr.Close();
             return (list);
         }
-        public List<Models.Shoes> getShoesDataByStyleType(String Gender)
+        public List<Models.Shoe> getShoesDataByStyleType(string Gender)
         {
-            List<Models.Shoes> list = new List<Shoes>();
-            string sql = "SELECT S.ShoesID, TS.Name, C.Name, S.Price, S.Discount, I.Url, S.StyleType " +
+            List<Models.Shoe> list = new List<Shoe>();
+            string sql = "SELECT S.ShoesID, SD.Name, TS.Name, C.Name, S.Price, S.Discount, I.Url, S.StyleType " +
                 "FROM Shoes S " +
                 "join Shoes_Details SD ON S.ShoesID = SD.ShoesID " +
                 "join Type_Shoes TS ON SD.TypeShoesID = TS.TypeShoesID " +
@@ -64,21 +62,22 @@ namespace XC_Shoes.Connects
                 "join Images I ON S.ShoesID = I.ShoesID AND CD.ColourID = I.ColourID " +
                 "Where S.StyleType like '" + Gender + "'";
             SqlDataReader rdr = db.ExcuteQuery(sql);
+            
             while (rdr.Read())
             {
-                Shoes emp = new Shoes();
-                emp.IconID = rdr.GetValue(0).ToString();
-                emp.ShoesID = rdr.GetValue(1).ToString();
-                emp.TypeShoesID = Convert.ToInt32(rdr.GetValue(2).ToString());
-                emp.NameShoes = rdr.GetValue(3).ToString();
-                emp.StyleType = rdr.GetValue(4).ToString();
-                emp.TypeShoesName = rdr.GetValue(5).ToString();
-                emp.NumberColor = Convert.ToInt32(rdr.GetValue(6).ToString());
-                emp.Price = float.Parse(rdr.GetValue(7).ToString());
-                emp.Discount = float.Parse(rdr.GetValue(8).ToString());
-                emp.IconID = rdr.GetValue(0).ToString();
+                Shoe emp = new Shoe();
+                emp.ShoesID = rdr.GetValue(0).ToString();
+                emp.NameShoes = rdr.GetValue(1).ToString();
+                emp.TypeShoesName = rdr.GetValue(2).ToString();
+                emp.NameColor = rdr.GetValue(3).ToString();
+                emp.Price = float.Parse(rdr.GetValue(4).ToString());
+                emp.Discount = float.Parse(rdr.GetValue(5).ToString());
+
+                emp.Url = rdr.GetValue(6).ToString();
+                emp.StyleType = rdr.GetValue(7).ToString();
                 list.Add(emp);
             }
+            rdr.Close();
             return (list);
         }
     }

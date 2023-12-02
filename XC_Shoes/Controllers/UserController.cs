@@ -23,7 +23,7 @@ namespace XC_Shoes.Controllers
         public ActionResult ShoesPage(string gender = "Men", string icon = "All")
         {
             ConnectShoes connectShoes = new ConnectShoes();
-            List<Shoes> ListShoes = connectShoes.getShoesData(gender);
+            List<Shoe> ListShoes = connectShoes.getShoesData(gender);
             return View(ListShoes);
         }
 

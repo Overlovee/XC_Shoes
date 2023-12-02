@@ -775,14 +775,14 @@ Select * From dbo.Colour_Detail
 
 
 --Manage Products
-SELECT S.ShoesID, TS.Name, C.Name, S.Price, S.Discount, I.Url, S.StyleType
+SELECT S.ShoesID, SD.Name, TS.Name, C.Name, S.Price, S.Discount, I.Url, S.StyleType
 FROM Shoes S
 join Shoes_Details SD ON S.ShoesID = SD.ShoesID
 join Type_Shoes TS ON SD.TypeShoesID = TS.TypeShoesID
 join Colour_Detail CD ON S.ShoesID = CD.ShoesID
 join Colours C ON CD.ColourID = C.ColourID
 join Images I ON S.ShoesID = I.ShoesID AND CD.ColourID = I.ColourID
-Where S.StyleType like N'Women';
+Where S.StyleType like N'Men';
 
 --search
 SELECT sh.ShoesID,img.url,shd.Name,tps.Name,count(DISTINCT cl.Name) as 'Number_Colour',Price

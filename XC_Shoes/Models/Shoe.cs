@@ -5,7 +5,7 @@ using System.Web;
 
 namespace XC_Shoes.Models
 {
-    public class Shoes
+    public class Shoe
     {
         public string IconID { get; set; }
         public string ShoesID { get; set; }
@@ -14,6 +14,7 @@ namespace XC_Shoes.Models
         public string StyleType { get; set; }
         public string TypeShoesName { get; set; }
         public int NumberColor { get; set; }
+        public string NameColor { get; set; }
         public float Price { get; set; }
         public float Discount { get; set; }
         public string Url { get; set; }
