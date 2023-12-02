@@ -50,7 +50,7 @@ namespace XC_Shoes.Connects
             rdr.Close();
             return (list);
         }
-        public List<Models.Shoe> getShoesDataByStyleType(string Gender)
+        public List<Models.Shoe> getShoesDataByStyleType(string Gender, string sort, string search)
         {
             List<Models.Shoe> list = new List<Shoe>();
             string sql = "SELECT S.ShoesID, SD.Name, TS.Name, C.Name, S.Price, S.Discount, I.Url, S.StyleType " +
@@ -60,7 +60,28 @@ namespace XC_Shoes.Connects
                 "join Colour_Detail CD ON S.ShoesID = CD.ShoesID " +
                 "join Colours C ON CD.ColourID = C.ColourID " +
                 "join Images I ON S.ShoesID = I.ShoesID AND CD.ColourID = I.ColourID " +
-                "Where S.StyleType like '" + Gender + "'";
+                "Where S.StyleType like '" + Gender + "' ";
+            if (search != "")
+            {
+                sql = "SELECT S.ShoesID, SD.Name, TS.Name, C.Name, S.Price, S.Discount, I.Url, S.StyleType " +
+                   "FROM Shoes S " +
+                   "join Shoes_Details SD ON S.ShoesID = SD.ShoesID " +
+                   "join Type_Shoes TS ON SD.TypeShoesID = TS.TypeShoesID " +
+                   "join Colour_Detail CD ON S.ShoesID = CD.ShoesID " +
+                   "join Colours C ON CD.ColourID = C.ColourID " +
+                   "join Images I ON S.ShoesID = I.ShoesID AND CD.ColourID = I.ColourID " +
+                   "Where S.StyleType like '" + Gender + "' " +
+                   "And SD.Name like '%"+search+"%'";
+            }
+            if (sort == "DESC")
+            {
+                sql += "Order by SD.Name DESC";
+            }
+            else
+            {
+                sql += "Order by SD.Name ASC";
+            }
+            
             SqlDataReader rdr = db.ExcuteQuery(sql);
             
             while (rdr.Read())

@@ -782,7 +782,8 @@ join Type_Shoes TS ON SD.TypeShoesID = TS.TypeShoesID
 join Colour_Detail CD ON S.ShoesID = CD.ShoesID
 join Colours C ON CD.ColourID = C.ColourID
 join Images I ON S.ShoesID = I.ShoesID AND CD.ColourID = I.ColourID
-Where S.StyleType like N'Men';
+Where S.StyleType like N'Men'
+Order by SD.Name DESC;
 
 --search
 SELECT sh.ShoesID,img.url,shd.Name,tps.Name,count(DISTINCT cl.Name) as 'Number_Colour',Price

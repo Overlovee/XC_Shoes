@@ -1,9 +1,10 @@
 ﻿@model IEnumerable<XC_Shoes.Models.Shoe>
 
 @{
-    ViewBag.Title = "Home";
     Layout = "~/Views/Shared/AdminLayoutPage.cshtml";
     string projectDirectory = System.Web.Hosting.HostingEnvironment.MapPath("~");
+
+
 }
 
 <nav class="navbar navbar-expand-md box">
@@ -161,10 +162,12 @@
                     </div>
                 </li>
             </ul>
-            <form class="d-flex search-box justify-content-end">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            @using (Html.BeginForm("ManageProduct", "Admin", new { styleStyle = ViewBag.Style, sort = ViewBag.Sort }, FormMethod.Get, new { @class = "d-flex search-box justify-content-end" }))
+            {
+                <input class="form-control" type="search" placeholder="Search" name="search"
+                       aria-label="Search" value="@ViewBag.SearchValue">
                 <button class="search-btn" type="submit">Search</button>
-            </form>
+            }
         </div>
     </div>
 </nav>
@@ -173,20 +176,31 @@
         <div class="list-box-title d-flex">
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonSort" data-bs-toggle="dropdown" aria-expanded="false">
-                    Men
+                    @ViewBag.Style
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonSort">
-                    <li><a class="dropdown-item" href="#">Men</a></li>
-                    <li><a class="dropdown-item" href="#">Women</a></li>
+                    <li><a class="dropdown-item" href="@Url.Action("ManageProduct", "Admin", new { styleStyle = "Men", search = ViewBag.SearchValue})">Men</a></li>
+                    <li><a class="dropdown-item" href="@Url.Action("ManageProduct", "Admin", new { styleStyle = "Women", search = ViewBag.SearchValue })">Women</a></li>
                 </ul>
             </div>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonSort" data-bs-toggle="dropdown" aria-expanded="false">
-                    Sort <i class="fa-solid fa-arrow-down-a-z"></i>
+                    Sort
+                    @{
+                        if (ViewBag.Sort == "ASC")
+                        {
+                            <i class="fa-solid fa-arrow-down-a-z"></i>
+                        }
+                        else
+                        {
+                            <i class="fa-solid fa-arrow-down-z-a"></i>
+                        }
+
+                    }
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonSort">
-                    <li><a class="dropdown-item" href="#">Sort <i class="fa-solid fa-arrow-down-a-z"></i></a></li>
-                    <li><a class="dropdown-item" href="#">Sort <i class="fa-solid fa-arrow-down-z-a"></i></a></li>
+                    <li><a class="dropdown-item" href="@Url.Action("ManageProduct", "Admin", new { styleStyle = ViewBag.Style, sort = "ASC", search = ViewBag.SearchValue })">Sort <i class="fa-solid fa-arrow-down-a-z"></i></a></li>
+                    <li><a class="dropdown-item" href="@Url.Action("ManageProduct", "Admin", new { styleStyle = ViewBag.Style, sort = "DESC", search = ViewBag.SearchValue })">Sort <i class="fa-solid fa-arrow-down-z-a"></i></a></li>
                 </ul>
             </div>
         </div>

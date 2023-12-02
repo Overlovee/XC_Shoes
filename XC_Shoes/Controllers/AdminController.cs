@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using XC_Shoes.Models;
 using XC_Shoes.Connects;
+using System.Web.Services.Description;
 
 namespace XC_Shoes.Controllers
 {
@@ -12,14 +13,17 @@ namespace XC_Shoes.Controllers
     {
         // GET: Admin
         ConnectShoes connectShoes = new ConnectShoes();
-        public ActionResult Home(string styleStyle = "Men")
+        public ActionResult Home()
         {
-            List<Shoe> list = connectShoes.getShoesDataByStyleType(styleStyle);
-            return View(list);
+            return View();
         }
-        public ActionResult ManageProduct(string styleStyle = "Men")
+        public ActionResult ManageProduct(string styleStyle = "Men", string sort = "ASC", string search = "")
         {
-            List<Shoe> list = connectShoes.getShoesDataByStyleType(styleStyle);
+            List<Shoe> list = connectShoes.getShoesDataByStyleType(styleStyle, sort, search);
+            ViewBag.Title = "Manage Product";
+            ViewBag.Style = styleStyle;
+            ViewBag.Sort = sort;
+            ViewBag.SearchValue = search;
             return View(list);
         }
     }
