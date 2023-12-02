@@ -1,6 +1,6 @@
-﻿CREATE DATABASE DB_1990s_Shoes_Store
+﻿CREATE DATABASE DB_XC_Shoes_Store
 
-USE DB_1990s_Shoes_Store
+USE DB_XC_Shoes_Store
 
 --CREATE TABLE
 
@@ -767,7 +767,24 @@ SELECT Image,UserName,UserID,Email,PhoneNumber
 FROM Users
 Where Role= 0
 
+Select * From dbo.Images
+Select * From dbo.Colours
+Select * From dbo.Shoes
+Select * From dbo.Shoes_Details
+Select * From dbo.Colour_Detail
+
+
 --Manage Products
+SELECT S.ShoesID, TS.Name, C.Name, S.Price, S.Discount, I.Url, S.StyleType
+FROM Shoes S
+join Shoes_Details SD ON S.ShoesID = SD.ShoesID
+join Type_Shoes TS ON SD.TypeShoesID = TS.TypeShoesID
+join Colour_Detail CD ON S.ShoesID = CD.ShoesID
+join Colours C ON CD.ColourID = C.ColourID
+join Images I ON S.ShoesID = I.ShoesID AND CD.ColourID = I.ColourID
+Where S.StyleType like N'Women';
+
+--search
 SELECT sh.ShoesID,img.url,shd.Name,tps.Name,count(DISTINCT cl.Name) as 'Number_Colour',Price
 FROM Images img , Shoes sh,Type_Shoes tps,Colour_Detail cld,Shoes_Details shd,Colours cl
 Where sh.ShoesID = shd.ShoesID and cl.ColourID = cld.ColourID and cld.ShoesID = sh.ShoesID and img.ShoesID = shd.ShoesID 
@@ -793,14 +810,15 @@ Delete from USERS
 WHere UserName= '';
 
 --View
-SELECT img.url,shd.Name,cl.Name,sum(DISTINCT od.Quantity) AS 'Quantity Sold'
-FROM Images img,Shoes_Details shd,Order_Detail od,Colour_Detail cld,Colours cl
-where shd.ShoesID = cld.ShoesID AND cl.ColourID = cld.ColourID AND shd.ShoesID = img.ShoesID AND shd.ShoesID = od.ShoesID AND od.ShoesID='JD1'
+SELECT img.url, shd.Name, cl.Name, sum(DISTINCT od.Quantity) AS 'Quantity Sold'
+FROM Images img, Shoes_Details shd, Order_Detail od, Colour_Detail cld, Colours cl
+where od.ShoesID='JD1' 
+AND shd.ShoesID = cld.ShoesID 
+AND cl.ColourID = cld.ColourID 
+AND shd.ShoesID = img.ShoesID AND shd.ShoesID = od.ShoesID
 Group by img.url,shd.Name,cl.Name
 
 --Thong tin giay da dat--
-
-
 SELECT * FROM Users
 SELECT *FROM Shop_Branchs
 SELECT *FROM Shoes

@@ -236,6 +236,7 @@
     <Compile Include="Connects\ConnectShoes.cs" />
     <Compile Include="Connects\ConnectTypeShoes.cs" />
     <Compile Include="Connects\DbContext.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\ShoesController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -250,6 +251,7 @@
     <Content Include="Views\web.config" />
     <Content Include="Databases\DB_ShoesStore" />
     <Content Include="Databases\DB_ShoesStore.bacpac" />
+    <Content Include="Credentials\credentials.json" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\AdminHeader.cshtml" />
     <Content Include="Views\Shared\AdminLayoutPage.cshtml" />
@@ -271,6 +273,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
