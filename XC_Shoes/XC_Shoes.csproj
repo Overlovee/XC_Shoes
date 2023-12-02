@@ -236,6 +236,7 @@
     <Compile Include="Connects\ConnectIcons.cs" />
     <Compile Include="Connects\ConnectShoes.cs" />
     <Compile Include="Connects\ConnectTypeShoes.cs" />
+    <Compile Include="Connects\ConnectUsers.cs" />
     <Compile Include="Connects\DbContext.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\ShoesController.cs" />
@@ -246,6 +247,7 @@
     <Compile Include="Models\Icons.cs" />
     <Compile Include="Models\TypeShoes.cs" />
     <Compile Include="Models\Shoe.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

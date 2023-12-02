@@ -3,8 +3,6 @@
 @{
     Layout = "~/Views/Shared/AdminLayoutPage.cshtml";
     string projectDirectory = System.Web.Hosting.HostingEnvironment.MapPath("~");
-
-
 }
 
 <nav class="navbar navbar-expand-md box">
@@ -172,7 +170,7 @@
     </div>
 </nav>
 <div class="box list-box d-flex flex-column">
-    <div class="header-list-box d-flex justify-content-between">
+    <div class="header-list-box d-flex justify-content-between flex-column">
         <div class="list-box-title d-flex">
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonSort" data-bs-toggle="dropdown" aria-expanded="false">
@@ -204,7 +202,7 @@
                 </ul>
             </div>
         </div>
-        <nav aria-label="Page navigation example">
+        <nav aria-label="Page navigation example" class="pagination-nav d-flex justify-content-center">
             <ul class="pagination">
                 <li class="page-item">
                     <a class="page-link" href="#" aria-label="Previous">
@@ -252,13 +250,13 @@
                         </div>
                         <div class="card-footer d-flex">
                             <button class="edit-btn col"
-                                    data-bs-toggle="modal" data-bs-target=@item.ShoesID>
+                                    data-bs-toggle="modal" data-bs-target="#@item.ShoesID">
                                 Edit
                             </button>
                             <button class="delete-btn col">@Html.ActionLink("Delete", "Delete", new { id = item.ShoesID })</button>
                         </div>
                     </div>
-                    <div class="modal fade" id=@item.ShoesID data-bs-backdrop="static"
+                    <div class="modal fade" id="@item.ShoesID" data-bs-backdrop="static"
                          data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">

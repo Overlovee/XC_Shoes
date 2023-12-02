@@ -26,5 +26,14 @@ namespace XC_Shoes.Controllers
             ViewBag.SearchValue = search;
             return View(list);
         }
+        public ActionResult ManageUser(string styleStyle = "Men", string sort = "ASC", string search = "")
+        {
+            List<Shoe> list = connectShoes.getShoesDataByStyleType(styleStyle, sort, search);
+            ViewBag.Title = "Manage Product";
+            ViewBag.Style = styleStyle;
+            ViewBag.Sort = sort;
+            ViewBag.SearchValue = search;
+            return View(list);
+        }
     }
 }

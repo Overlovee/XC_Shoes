@@ -847,6 +847,10 @@ header .col {
     padding: 1rem 2rem;
 }
 
-.product-list .card-img-top{
-    height: 5;
+.pagination-nav{
+    margin-top: 1rem;
+    width: 100%;
+}
+.user-list .row {
+    gap: 2rem;
 }
