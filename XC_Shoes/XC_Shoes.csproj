@@ -236,6 +236,7 @@
     <Compile Include="Connects\ConnectIcons.cs" />
     <Compile Include="Connects\ConnectShoes.cs" />
     <Compile Include="Connects\ConnectTypeShoes.cs" />
+    <Compile Include="Connects\ConnectUsers.cs" />
     <Compile Include="Connects\DbContext.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\ShoesController.cs" />
@@ -245,7 +246,12 @@
     </Compile>
     <Compile Include="Models\Icons.cs" />
     <Compile Include="Models\TypeShoes.cs" />
+<<<<<<< HEAD
     <Compile Include="Models\Shoes.cs" />
+=======
+    <Compile Include="Models\Shoe.cs" />
+    <Compile Include="Models\User.cs" />
+>>>>>>> 08e934dd0b6526e9ccde059b1580cebdfa81682c
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

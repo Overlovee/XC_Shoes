@@ -757,13 +757,14 @@ WHERE UserID = 'US1';
 SELECT *
 FROM Users_ShipmentDetails
 WHERE UserID = 'US1';
+
 --Manager Admin
-SELECT Image,UserName,UserID,Email,PhoneNumber
+SELECT UserID, UserName, Gender, Email, PhoneNumber, Image
 FROM Users
 Where Role= 1
 
---Manager Admin
-SELECT Image,UserName,UserID,Email,PhoneNumber
+--Manager User
+SELECT *
 FROM Users
 Where Role= 0
 

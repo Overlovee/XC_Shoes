@@ -9,7 +9,7 @@ sidebarToggle.addEventListener("click", function () {
         document.querySelector(".header-right").classList.toggle("visibled");
         document.querySelector(".main-content").classList.toggle("visibled");
     }
-    
+
 });
 function updateCSS() {
     if (window.innerWidth <= 1024) {
@@ -21,15 +21,7 @@ function updateCSS() {
         }
     }
 
-    const textTitleListBox = document.querySelector(".list-box-title-text");
-    if (textTitleListBox) {
-        if (window.innerWidth < 768) {
-            textTitleListBox.style.display = "none";
-        }
-        else {
-            textTitleListBox.style.display = "block";
-        }
-    }
+
     const searchBox = document.querySelector(".search-box");
     if (searchBox) {
         if (window.innerWidth < 768) {
