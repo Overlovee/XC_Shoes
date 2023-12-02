@@ -12,6 +12,7 @@ namespace XC_Shoes.Connects
         DbContext db = new DbContext();
         public List<Models.Shoes> getShoesData(String Gender)
         {
+<<<<<<< HEAD
             List<Models.Shoes> list = new List<Shoes>();
             string sql = "SELECT S.IconID, " +
                 "S.ShoesID, " +
@@ -28,6 +29,10 @@ namespace XC_Shoes.Connects
                 "AND S.ShoesID = CD.ShoesID " +
                 "GROUP BY S.IconID, S.ShoesID, SD.TypeShoesID, SD.Name, S.StyleType, TS.Name, S.Price, S.Discount " +
                 "HAVING StyleType = '" + Gender + "'";
+=======
+            List<Models.Shoes> listEmployee = new List<Shoes>();
+            string sql = "SELECT * FROM dbo.ShowShoesPage('"+ Gender +"')";
+>>>>>>> 306ca26beba4f1b7127b325f33dada825ffe8b1d
             SqlDataReader rdr = db.ExcuteQuery(sql);
             while (rdr.Read())
             {
