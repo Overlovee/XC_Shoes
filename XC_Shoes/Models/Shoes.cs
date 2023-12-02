@@ -5,7 +5,7 @@ using System.Web;
 
 namespace XC_Shoes.Models
 {
-    public class Shoe
+    public class Shoes
     {
         public string IconID { get; set; }
         public string ShoesID { get; set; }

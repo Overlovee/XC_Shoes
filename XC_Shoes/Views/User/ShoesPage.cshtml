@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "ShowShoesPage";
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
+    string projectDirectory = System.Web.Hosting.HostingEnvironment.MapPath("~");
 }
 
 <div class="container-fluid">
@@ -58,9 +59,20 @@
                                 <!-- col-sm-4 to make three columns in a row for small screens -->
                                 <div class="product-list-box mt-5">
                                     <div class="card">
+
                                         <a href="#">
-                                            <img class="card-img-top img-fluid" alt="Men"
-                                                 src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b207c97d-1d63-4e43-9339-375b26222ae2/air-jordan-xxxviii-fiba-pf-basketball-shoes-XnhFhP.png">
+                                            @{
+                                                string resourcesPath = "~/Resources/Shoes/";
+                                                string directoryPath = Path.Combine(projectDirectory, "Resources", "Shoes", @item.Url);
+                                                resourcesPath = Path.Combine(resourcesPath, @item.Url);
+
+                                                string[] imageFiles = Directory.GetFiles(directoryPath, "*-AVT.jpg").Union(Directory.GetFiles(directoryPath, "*-AVT.png")).ToArray();
+
+                                                string imagePath = imageFiles.Length > 0 ? Path.Combine(directoryPath, Path.GetFileName(imageFiles[0])) : "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b207c97d-1d63-4e43-9339-375b26222ae2/air-jordan-xxxviii-fiba-pf-basketball-shoes-XnhFhP.png";
+                                                string fileNameOnly = Path.GetFileName(imagePath);
+                                                resourcesPath = Path.Combine(resourcesPath, fileNameOnly);
+                                            }
+                                            <img class="card-img-top img-fluid" alt="Men" src="@Url.Content(resourcesPath)">
                                         </a>
                                         <div class="card-body">
                                             <a href="#">

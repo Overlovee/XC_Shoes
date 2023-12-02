@@ -245,7 +245,7 @@
     </Compile>
     <Compile Include="Models\Icons.cs" />
     <Compile Include="Models\TypeShoes.cs" />
-    <Compile Include="Models\Shoe.cs" />
+    <Compile Include="Models\Shoes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -265,6 +265,7 @@
     <Content Include="Views\Shoes\TypeShoesPartial.cshtml" />
     <Content Include="Views\Shoes\IconsPartial.cshtml" />
     <Content Include="Views\Admin\ManageProduct.cshtml" />
+    <Content Include="Views\User\ShowHomePage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

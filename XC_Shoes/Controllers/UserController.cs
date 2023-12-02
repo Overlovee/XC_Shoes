@@ -18,12 +18,15 @@ namespace XC_Shoes.Controllers
         {
             return View();
         }
+        public ActionResult ShowHomePage()
+        {
+            return View();
+        }
 
-
-        public ActionResult ShoesPage(string gender = "Men", string icon = "All")
+        public ActionResult ShoesPage(string gender)
         {
             ConnectShoes connectShoes = new ConnectShoes();
-            List<Shoe> ListShoes = connectShoes.getShoesData(gender);
+            List<Shoes> ListShoes = connectShoes.getShoesData(gender);
             return View(ListShoes);
         }
 
