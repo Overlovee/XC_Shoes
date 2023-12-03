@@ -7,12 +7,12 @@
                 </button>
             </div>
             <div class="header-center col-8">
-                <h2 class="header-title">Home</h2>
+                <h2 class="header-title">@ViewBag.Title</h2>
             </div>
             <div class="header-right col-2">
                 <div class="avt-img">
-                    <a href="#" data-bs-toggle="offcanvas" data-bs-target="#account-display" aria-controls="account-display">
-                        <img src="https://i.pinimg.com/736x/a3/84/f2/a384f2904ab78647bf15379feea9c04a.jpg"
+                    <a href="@Url.Action("MyAccount", "Admin")" data-bs-toggle="offcanvas" data-bs-target="#account-display" aria-controls="account-display">
+                        <img src="@Url.Content(ViewBag.ThisAccountImage)"
                              alt="Minh Thu">
                     </a>
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="account-display" aria-labelledby="offcanvasRightLabel">
@@ -23,14 +23,14 @@
                         </div>
                         <div class="offcanvas-body">
                             <div class="modal-avt-img">
-                                <a href="#">
-                                    <img src="https://i.pinimg.com/736x/a3/84/f2/a384f2904ab78647bf15379feea9c04a.jpg"
+                                <a href="@Url.Action("MyAccount", "Admin")">
+                                    <img src="@Url.Content(ViewBag.ThisAccountImage)"
                                          alt="Minh Thu">
                                 </a>
                             </div>
                             <div class="modal-body-content d-flex flex-column">
-                                <button>My Account</button>
-                                <button>Log out</button>
+                                <a href="@Url.Action("MyAccount", "Admin")">My Account</a>
+                                <a href="#">Log out</a>
                             </div>
                         </div>
                     </div>

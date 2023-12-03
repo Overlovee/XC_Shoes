@@ -160,8 +160,10 @@
                     </div>
                 </li>
             </ul>
-            @using (Html.BeginForm("ManageProduct", "Admin", new { styleStyle = ViewBag.Style, sort = ViewBag.Sort }, FormMethod.Get, new { @class = "d-flex search-box justify-content-end" }))
+            @using (Html.BeginForm("ManageProduct", "Admin", FormMethod.Get, new { @class = "d-flex search-box justify-content-end" }))
             {
+                <input type="hidden" name="styleStyle" value="@ViewBag.Style" />
+                <input type="hidden" name="sort" value="@ViewBag.Sort" />
                 <input class="form-control" type="search" placeholder="Search" name="search"
                        aria-label="Search" value="@ViewBag.SearchValue">
                 <button class="search-btn" type="submit">Search</button>

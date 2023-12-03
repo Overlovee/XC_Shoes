@@ -399,13 +399,19 @@ header .col {
     margin-top: 2rem;
 }
 
-.add-new-btn {
+.add-new-btn{
     border-radius: 2px;
     background-color: #001233;
     color: white;
-    padding: 0.8rem 2.6rem;
+    padding: 1rem 2.6rem;
 }
-.add-new-btn:hover {
+.classify-btn {
+    border-radius: 2px;
+    color: white;
+    padding: 1.4rem 2.6rem;
+}
+
+.add-new-btn:hover{
     background-color: #33415c;
 }
 #navbarSupportedContent .nav-item{
@@ -509,8 +515,14 @@ header .col {
 #account-display .btn-inform i{
     font-size: 2rem;
 }
-#account-display .modal-body-content button:hover{
+#account-display .modal-body-content a {
+    display: block;
+    width: 100%;
+    color: black;
+}
+#account-display .modal-body-content a:hover{
     background-color: rgba(0,0,0,.125);
+    color: black;
 }
 .content-list-box .row {
     padding: 1rem 2rem;
@@ -557,21 +569,25 @@ header .col {
 }
 
 .edit-btn, .delete-btn, .detail-btn {
-    padding-top: 0.6rem;
-    padding-bottom: 0.6rem;
+    padding: 1.2rem;
+    cursor: pointer;
 }
 .edit-btn, .detail-btn {
     background-color: #daf7dc;
+    color: black;
 }
 .delete-btn {
     background-color: #f1f2f6;
+    color: black;
 }
 .edit-btn:hover, .detail-btn:hover {
     background-color: #7ae582;
+    color: black;
 }
 
 .delete-btn:hover {
     background-color: #f87575;
+    color: black;
 }
 
 .user-list .card img{
@@ -722,29 +738,32 @@ header .col {
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 5px;
-    display: none;
     border-radius: 4px;
 }
 .edit-avt-btn:hover {
     background-color: rgba(0, 0, 0, 0.3);
-}
-#avt:hover .edit-avt-btn {
-    display: block;
 }
 
 .navbar .container-fluid{
     width:100%;
 }
 #orderListSelectBox .nav-item {
-    padding: 0.4rem;
+    padding: 2rem 0.4rem;
 }
 
-#orderListSelectBox .nav-item button{
+#orderListSelectBox .nav-item a{
     background-color: #cccccc;
+
 }
-#orderListSelectBox .nav-item button:hover {
-    background-color: black;
+#orderListSelectBox .nav-item a:hover {
+    background-color: #7ae582;
+    color: white;
 }
+
+.classify-btn-selected {
+    background-color: #7ae582!important;
+}
+
 .order-list .card {
     display: flex;
     flex-direction: row !important;
@@ -841,13 +860,13 @@ header .col {
 }
 .detail-order .footer-detail-order {
     text-align: right;
-    padding: 1rem 1rem;
+    padding: 1rem 2rem;
+    padding-top: 2rem;
 }
-.detail-order .footer-detail-order button{
+.detail-order .footer-detail-order a {
     padding: 1rem 2rem;
 }
-
-.pagination-nav{
+.pagination-nav {
     margin-top: 1rem;
     width: 100%;
 }

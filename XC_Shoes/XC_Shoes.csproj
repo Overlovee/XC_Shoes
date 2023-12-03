@@ -121,24 +121,27 @@
     <Content Include="Content\admin_site.css" />
     <Content Include="Content\API_GoogleDrive.js" />
     <Content Include="Content\site.css" />
-    <Content Include="Databases\DB_ShoesStore.sql" />
+    <Content Include="Databases\DB_XC_Insert.sql" />
+    <Content Include="Databases\DB_XC_Select.sql" />
+    <Content Include="Databases\DB_XC_Shoes_Store.sql" />
+    <Content Include="Databases\DB_XC_Trigger&amp;StoreProcedure&amp;Function.sql" />
     <Content Include="Global.asax" />
     <Content Include="Resources\Account\z4263646737653_b71c2a8b1f0f08aedc2b8fb8c85dfe12.jpg" />
-    <Content Include="Resources\Shoes\AF1-MenShoes-2-Nike Air Force 1 %2707\AF1-MenShoes-2-Nike Air Force 1 %2707-AVT.jpg" />
-    <Content Include="Resources\Shoes\AF1-MenShoes-2-Nike Air Force 1 %2707\AF1-MenShoes-2-Nike Air Force 1 %2707-Side1.jpg" />
-    <Content Include="Resources\Shoes\AF1-MenShoes-2-Nike Air Force 1 %2707\AF1-MenShoes-2-Nike Air Force 1 %2707-Side2.jpg" />
-    <Content Include="Resources\Shoes\AF1-MenShoes-3-Nike Air Force 1 %2707\AF1-MenShoes-3-Nike Air Force 1 %2707-AVT.jpg" />
-    <Content Include="Resources\Shoes\AF1-MenShoes-3-Nike Air Force 1 %2707\AF1-MenShoes-3-Nike Air Force 1 %2707-Side1.jpg" />
-    <Content Include="Resources\Shoes\AF1-MenShoes-3-Nike Air Force 1 %2707\AF1-MenShoes-3-Nike Air Force 1 %2707-Side2.jpg" />
+    <Content Include="Resources\Shoes\AF1-Men-2\AF1-MenShoes-2-Nike Air Force 1 %2707-AVT.jpg" />
+    <Content Include="Resources\Shoes\AF1-Men-2\AF1-MenShoes-2-Nike Air Force 1 %2707-Side1.jpg" />
+    <Content Include="Resources\Shoes\AF1-Men-2\AF1-MenShoes-2-Nike Air Force 1 %2707-Side2.jpg" />
+    <Content Include="Resources\Shoes\AF1-Men-3\AF1-MenShoes-3-Nike Air Force 1 %2707-AVT.jpg" />
+    <Content Include="Resources\Shoes\AF1-Men-3\AF1-MenShoes-3-Nike Air Force 1 %2707-Side1.jpg" />
+    <Content Include="Resources\Shoes\AF1-Men-3\AF1-MenShoes-3-Nike Air Force 1 %2707-Side2.jpg" />
     <Content Include="Resources\Shoes\AF1-MenShoes-4-Nike Air Force 1 %2707\AF1-MenShoes-4-Nike Air Force 1 %2707-AVT.jpg" />
     <Content Include="Resources\Shoes\AF1-MenShoes-4-Nike Air Force 1 %2707\AF1-MenShoes-4-Nike Air Force 1 %2707-Side1.jpg" />
     <Content Include="Resources\Shoes\AF1-MenShoes-4-Nike Air Force 1 %2707\AF1-MenShoes-4-Nike Air Force 1 %2707-Side2.jpg" />
     <Content Include="Resources\Shoes\AF2-MenShoes-1-Nike Air Force 1  Mid\AF2-MenShoes-1-Nike Air Force 1  Mid-AVT.jpg" />
     <Content Include="Resources\Shoes\AF2-MenShoes-1-Nike Air Force 1  Mid\AF2-MenShoes-1-Nike Air Force 1  Mid-Side1.jpg" />
     <Content Include="Resources\Shoes\AF2-MenShoes-1-Nike Air Force 1  Mid\AF2-MenShoes-1-Nike Air Force 1  Mid-Side2.jpg" />
-    <Content Include="Resources\Shoes\AF2-MenShoes-2-Nike Air Force 1  Mid\AF2-MenShoes-2-Nike Air Force 1  Mid-AVT.jpg" />
-    <Content Include="Resources\Shoes\AF2-MenShoes-2-Nike Air Force 1  Mid\AF2-MenShoes-2-Nike Air Force 1  Mid-Side1.jpg" />
-    <Content Include="Resources\Shoes\AF2-MenShoes-2-Nike Air Force 1  Mid\AF2-MenShoes-2-Nike Air Force 1  Mid-Side2.jpg" />
+    <Content Include="Resources\Shoes\AF2-Men-2\AF2-MenShoes-2-Nike Air Force 1  Mid-AVT.jpg" />
+    <Content Include="Resources\Shoes\AF2-Men-2\AF2-MenShoes-2-Nike Air Force 1  Mid-Side1.jpg" />
+    <Content Include="Resources\Shoes\AF2-Men-2\AF2-MenShoes-2-Nike Air Force 1  Mid-Side2.jpg" />
     <Content Include="Resources\Shoes\AF2-MenShoes-5-Nike Air Force 1  Mid\AF2-MenShoes-5-Nike Air Force 1  Mid-AVT.jpg" />
     <Content Include="Resources\Shoes\AF2-MenShoes-5-Nike Air Force 1  Mid\AF2-MenShoes-5-Nike Air Force 1  Mid-Side1.jpg" />
     <Content Include="Resources\Shoes\AF2-MenShoes-5-Nike Air Force 1  Mid\AF2-MenShoes-5-Nike Air Force 1  Mid-Side2.jpg" />
@@ -234,6 +237,7 @@
     <Compile Include="API\GoogleDriveAPI.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Connects\ConnectIcons.cs" />
+    <Compile Include="Connects\ConnectOrders.cs" />
     <Compile Include="Connects\ConnectShoes.cs" />
     <Compile Include="Connects\ConnectTypeShoes.cs" />
     <Compile Include="Connects\ConnectUsers.cs" />
@@ -245,6 +249,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Icons.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetails.cs" />
+    <Compile Include="Models\OrderSystem.cs" />
     <Compile Include="Models\TypeShoes.cs" />
     <Compile Include="Models\Shoe.cs" />
     <Compile Include="Models\User.cs" />
@@ -252,8 +259,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <Content Include="Databases\DB_ShoesStore.bacpac" />
     <Content Include="Credentials\credentials.json" />
+    <Content Include="Databases\DB_XC_Shoes_Store.bacpac" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\AdminHeader.cshtml" />
     <Content Include="Views\Shared\AdminLayoutPage.cshtml" />
@@ -267,6 +274,10 @@
     <Content Include="Views\Shoes\TypeShoesPartial.cshtml" />
     <Content Include="Views\Shoes\IconsPartial.cshtml" />
     <Content Include="Views\Admin\ManageProduct.cshtml" />
+    <Content Include="Views\Admin\ManageUser.cshtml" />
+    <Content Include="Views\Admin\ManageAdmin.cshtml" />
+    <Content Include="Views\Admin\MyAccount.cshtml" />
+    <Content Include="Views\Admin\ManageOrder.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
