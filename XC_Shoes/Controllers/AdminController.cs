@@ -19,7 +19,7 @@ namespace XC_Shoes.Controllers
         }
         public ActionResult ManageProduct(string styleStyle = "Men", string sort = "ASC", string search = "")
         {
-            List<Shoes> list = connectShoes.getShoesDataByStyleType(styleStyle, sort, search);
+            List<Shoe> list = connectShoes.getShoesDataByStyleType(styleStyle, sort, search);
             ViewBag.Title = "Manage Product";
             ViewBag.Style = styleStyle;
             ViewBag.Sort = sort;

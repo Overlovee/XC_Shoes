@@ -9,15 +9,15 @@
                         Find a store
                     </a>
                 </li>
-                <li>| &nbsp;<a href="./sign-in.html" id="sign-in">Sign In</a></li>
-                <li>| &nbsp;<a href="./sign-up.html" id="sign-up">Sign Up</a></li>
+                <li>| &nbsp;<a href="@Url.Action("SignIn", "User")" id="sign-in">Sign In</a></li>
+                <li>| &nbsp;<a href="@Url.Action("SignUp", "User")" id="sign-up">Sign Up</a></li>
             </ul>
         </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <div class="logo header-item">
-                <a href="/index.html">
+                <a href="@Url.Action("ShowHomePage", "User")">
                     <svg id="logo-nike" viewBox="0 0 24 24" width="60px" height="60px">
                         <path d="M 7 6 L 9 6 L 11 9 L 11 11 L 9 14 L 7 14 L 10 10 L 10
                       10 L 7 6 m 11 1 L 20 7 L 20 6 L 18 6 C 13 6 13 14 18 14
@@ -35,7 +35,7 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-item-title" href="./index.html"
+                        <a class="nav-item-title" href="@Url.Action("ShowHomePage", "User")"
                            rel="noopener noreferrer">Home</a>
                         <div class="sub-nav-box">
                             <ul class="sub-nav">
@@ -55,7 +55,7 @@
                                             For
                                             Men
                                         </a>
-                                        <li><a href="./product-pages/men-shoes.html">Shoes</a></li>
+                                        <li><a href="@Url.Action("ShoesPage", "User", new { gender = "Men" })">Shoes</a></li>
                                         <li><a href="./product-pages/men-clothing.html">Clothing</a></li>
                                     </ul>
                                 </li>
@@ -66,7 +66,7 @@
                                             For
                                             Women
                                         </a>
-                                        <li><a href="./product-pages/women-shoes.html">Shoes</a></li>
+                                        <li><a href="@Url.Action("ShoesPage", "User", new { gender = "Women" })">Shoes</a></li>
                                         <li><a href="./product-pages/women-clothing.html">Clothing</a></li>
                                     </ul>
                                 </li>
@@ -183,10 +183,10 @@
             </div>
 
             <div id="action-btn" class="header-item" style="font-size: 2.2rem;">
-                <a href="./favorite.html" id="favorite" style="float: left;">
+                <a href="@Url.Action("ShowFavoritePage", "Favorite")" id="favorite" style="float: left;">
                     <i class="fa-sharp fa-regular fa-heart"></i>
                 </a>
-                <a href="./bag.html" id="bag-shopping" style="float: right;">
+                <a href="@Url.Action("ShowBagPage", "Bag")" id="bag-shopping" style="float: right;">
                     <i class="fa-sharp fa-solid fa-cart-shopping"></i>
                 </a>
             </div>

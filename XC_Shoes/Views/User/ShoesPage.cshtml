@@ -1,4 +1,4 @@
-﻿@model IEnumerable<XC_Shoes.Models.Shoes>
+﻿@model IEnumerable<XC_Shoes.Models.Shoe>
 @{
     ViewBag.Title = "ShowShoesPage";
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
@@ -60,7 +60,7 @@
                                 <div class="product-list-box mt-5">
                                     <div class="card">
 
-                                        <a href="#">
+                                        <a href="@Url.Action("ShowShoesDetail", "User", new { shoesID = item.ShoesID, colourName = item.NameColor})">
                                             @{
                                                 string resourcesPath = "~/Resources/Shoes/";
                                                 string directoryPath = Path.Combine(projectDirectory, "Resources", "Shoes", @item.Url);
@@ -75,7 +75,7 @@
                                             <img class="card-img-top img-fluid" alt="Men" src="@Url.Content(resourcesPath)">
                                         </a>
                                         <div class="card-body">
-                                            <a href="#">
+                                            <a href="@Url.Action("ShowShoesDetail", "User", new { shoesID = item.ShoesID, colourName = item.NameColor})">
                                                 <h2 class="card-title">@Html.DisplayFor(modelItem => item.NameShoes)</h2>
                                             </a>
                                             <p class="card-text type-shoes">
@@ -85,7 +85,7 @@
                                             <p class="card-text number-colour">@Html.DisplayFor(modelItem => item.NumberColor) Colours</p>
                                         </div>
                                         <div class="card-footer">
-                                            <a href="#" class="btn categories-shoes-btn shoes-price" id="Moneycolor_@item.ShoesID">
+                                            <a href="@Url.Action("ShowShoesDetail", "User", new { shoesID = item.ShoesID, colourName = item.NameColor})" class="btn categories-shoes-btn shoes-price" id="Moneycolor_@item.ShoesID" class="btn categories-shoes-btn shoes-price" id="Moneycolor_@item.ShoesID">
                                                 @Html.DisplayFor(modelItem => item.Price) VND
                                             </a>
                                         </div>
