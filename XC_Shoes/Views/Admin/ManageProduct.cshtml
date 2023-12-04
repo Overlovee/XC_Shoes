@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<XC_Shoes.Models.Shoe>
 
 @{
+    ViewBag.Title = "Manage Products";
     Layout = "~/Views/Shared/AdminLayoutPage.cshtml";
     string projectDirectory = System.Web.Hosting.HostingEnvironment.MapPath("~");
 }
@@ -223,7 +224,7 @@
         </nav>
     </div>
     <div class="content-list-box product-list">
-        <div class="row">
+        <div class="row products">
             @foreach (var item in Model)
             {
                 <div class="col-md-3">
@@ -303,5 +304,3 @@
         </nav>
     </div>
 </div>
-
-

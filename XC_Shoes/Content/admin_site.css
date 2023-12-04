@@ -143,6 +143,11 @@ img, video, iframe, embed {
     background-color: #757575;
     color: white;
 }
+.list-group-item-selected {
+    background-color: #757575;
+    color: white;
+}
+
 .go-up-box a {
     color: white;
     font-size: 1.6rem;
@@ -872,4 +877,16 @@ header .col {
 }
 .user-list .row {
     gap: 2rem;
+}
+
+.products .col-md-3 {
+    margin-bottom: 2rem;
+}
+
+.home-chart-box{
+    display: none;
+}
+#previewImage{
+    width: 200px;
+    height: 200px;
 }

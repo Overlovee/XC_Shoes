@@ -30,7 +30,7 @@
         </a>
         <a href="@Url.Action("ManageAdmin", "Admin")">
         <li class="list-group-item">
-            Admins
+            Manage Admins
         </li>
         </a>
         <a href="@Url.Action("ManageProduct", "Admin")">
@@ -48,3 +48,15 @@
         <a href="#" class="btn">Go up <i class="fa-solid fa-arrow-up"></i></a>
     </div>
 </div>
+
+<script>
+    var statusValue = "@ViewBag.Title";
+
+    var TaskbarAdmin = document.querySelector('.taskbar');
+    var ListGroupItem = document.querySelectorAll('.list-group-item');
+    ListGroupItem.forEach(function (btn) {
+        if (btn.textContent.trim() === statusValue) {
+            btn.classList.add('list-group-item-selected');
+        }
+    });
+</script>

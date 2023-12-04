@@ -49,10 +49,49 @@ from Users u
 where u.UserID='US1'
 
 --Purchased
-SELECT SD.Name,SD.TypeShoesID,OD.ColourID,OD.size
-FROM Order_Detail OD,Shoes S,Shoes_Details SD
-WHERE OD.ShoesID = S.ShoesID AND s.ShoesID = SD.TypeShoesID
+SELECT S.ShoesID, SD.Name, C.Name, S.StyleType , SUM(OD.Quantity) AS Purchased, S.Price, S.Price * SUM(OD.Quantity) AS Total, I.Url
+FROM Shoes S
+JOIN Shoes_Details SD ON S.ShoesID = SD.ShoesID
+JOIN Colour_Detail CD ON S.ShoesID = CD.ShoesID
+JOIN Colours C ON CD.ColourID = C.ColourID
+LEFT JOIN Order_Detail OD ON S.ShoesID = OD.ShoesID AND C.ColourID = OD.ColourID AND S.StyleType = OD.StyleType
+Join Images I ON S.ShoesID = I.ShoesID AND C.ColourID = I.ColourID
+Join OrderSystem OS ON OD.OrderID = OS.OrderID
+Where OS.Status Like N'Done'
+GROUP BY S.ShoesID, SD.Name, C.Name, S.StyleType, S.Price, OD.Quantity, I.Url
+Order by Purchased DESC, S.ShoesID ASC
 
+
+SELECT Count(OrderID)
+FROM OrderSystem OS
+Where OS.Status Not Like N'Canceled'
+
+SELECT Count(OrderID)
+FROM OrderSystem OS
+Where OS.Status Not Like N'Canceled'
+And Month(OS.OrderDate) = Month(GETDATE()) - 1
+
+--Total
+SELECT OD.OrderID, Price, Quantity
+FROM Order_Detail OD
+Join OrderSystem OS ON OD.OrderID = OS.OrderID
+Where OS.Status Like N'Done'
+
+SELECT SUM(Price*Quantity)
+FROM Order_Detail OD
+Join OrderSystem OS ON OD.OrderID = OS.OrderID
+Where OS.Status Like N'Done'
+
+--Total in this month
+SELECT SUM(Price*Quantity)
+FROM Order_Detail OD
+Join OrderSystem OS ON OD.OrderID = OS.OrderID
+Where OS.Status Like N'Done' And MONTH(OS.OrderDate) = Month(GETDATE())
+
+SELECT * FROM Order_Detail
+SELECT * FROM Shoes_Details
+SELECT * FROM Colour_Detail
+SELECT * FROM size_Detail
 --Account
 SELECT *
 FROM Users

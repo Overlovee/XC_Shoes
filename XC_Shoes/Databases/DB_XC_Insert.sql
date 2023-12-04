@@ -302,7 +302,8 @@ Select * from Orders
 --Insert dữ liệu vào bảng Order_Detail
 INSERT INTO Order_Detail(OrderID,ShoesID,Quantity, size, StyleType,ColourID,Price)
 VALUES
-	('Order1','AF2',1, 42, 'Men',2,2700000),
+	('Order1','AF2',2, 42, 'Men',2,2700000),
+	('Order1','AF1',1, 37, 'Men',2,2700000),
 	('Order2','AF1',1, 38, 'Men',2,2500000);
 
 SELECT *FROM OrderSystem

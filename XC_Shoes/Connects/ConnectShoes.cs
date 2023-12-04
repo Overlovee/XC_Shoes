@@ -93,7 +93,6 @@ namespace XC_Shoes.Connects
                 emp.NameColor = rdr.GetValue(3).ToString();
                 emp.Price = float.Parse(rdr.GetValue(4).ToString());
                 emp.Discount = float.Parse(rdr.GetValue(5).ToString());
-
                 emp.Url = rdr.GetValue(6).ToString();
                 emp.StyleType = rdr.GetValue(7).ToString();
                 list.Add(emp);
