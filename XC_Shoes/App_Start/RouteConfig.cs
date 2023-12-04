@@ -16,11 +16,7 @@ namespace XC_Shoes
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-<<<<<<< HEAD
-                defaults: new { controller = "User", action = "ShoesPage", id = UrlParameter.Optional }
-=======
                 defaults: new { controller = "Admin", action = "Home", id = UrlParameter.Optional }
->>>>>>> 48fc07dd77edcbd86adcaadf14465d0be778973c
             );
         }
     }

@@ -63,5 +63,43 @@ namespace XC_Shoes.Connects
             rdr.Close();
             return emp;
         }
+        public List<UserShipment> getUserShipmentDetails(string id)
+        {
+            List<UserShipment> list = new List<UserShipment>();
+            string sql = "SELECT * FROM Users_ShipmentDetails WHERE UserID = '" + id + "'";
+            SqlDataReader rdr = db.ExcuteQuery(sql);
+            while (rdr.Read())
+            {
+                UserShipment emp = new UserShipment();
+                emp.UserID = rdr.GetValue(0).ToString();
+                emp.UserName = rdr.GetValue(1).ToString();
+                emp.PhoneNumber = rdr.GetValue(2).ToString();
+                emp.SpecificAddress = rdr.GetValue(3).ToString();
+                emp.AdministrativeBoundaries = rdr.GetValue(4).ToString();
+                emp.IsDefault = bool.Parse(rdr.GetValue(5).ToString());
+                list.Add(emp);
+            }
+            return (list);
+        }
+        public User getUserData(string Email)
+        {
+            string sql = "SELECT dbo.GetBeforeMailString(u.Email) as  'NameTag', u.UserID,u.UserName,u.Email,u.Password,u.PhoneNumber,u.Image,u.Role from Users u where u.Email = N'" + Email + "'";
+            User emp = new User();
+
+            SqlDataReader rdr = db.ExcuteQuery(sql);
+            while (rdr.Read())
+            {
+                emp.NameTag = rdr.GetValue(0).ToString();
+                emp.UserID = rdr.GetValue(1).ToString();
+                emp.UserName = rdr.GetValue(2).ToString();
+                emp.Email = rdr.GetValue(3).ToString();
+                emp.Password = rdr.GetValue(4).ToString();
+                emp.PhoneNumber = rdr.GetValue(5).ToString();
+                //emp.Role = int.Parse(rdr.GetValue(6).ToString());
+
+            }
+            rdr.Close();
+            return (emp);
+        }
     }
 }

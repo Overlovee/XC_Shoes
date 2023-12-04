@@ -298,6 +298,7 @@
     <Compile Include="Models\OrderDetails.cs" />
     <Compile Include="Models\OrderSystem.cs" />
     <Compile Include="Models\Purchased.cs" />
+    <Compile Include="Models\Size.cs" />
     <Compile Include="Models\TypeShoes.cs" />
     <Compile Include="Models\Shoe.cs" />
     <Compile Include="Models\User.cs" />
@@ -325,6 +326,13 @@
     <Content Include="Views\Admin\MyAccount.cshtml" />
     <Content Include="Views\Admin\ManageOrder.cshtml" />
     <Content Include="Views\Admin\Home.cshtml" />
+    <Content Include="Views\User\ShowHomePage.cshtml" />
+    <Content Include="Views\User\ShowShoesDetail.cshtml" />
+    <Content Include="Views\User\SignIn.cshtml" />
+    <Content Include="Views\User\SignUp.cshtml" />
+    <Content Include="Views\User\UserProfile.cshtml" />
+    <Content Include="Views\Bag\ShowBagPage.cshtml" />
+    <Content Include="Views\Favorite\ShowFavoritePage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
