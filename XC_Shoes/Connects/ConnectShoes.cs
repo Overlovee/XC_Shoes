@@ -96,7 +96,7 @@ namespace XC_Shoes.Connects
                    "join Colours C ON CD.ColourID = C.ColourID " +
                    "join Images I ON S.ShoesID = I.ShoesID AND CD.ColourID = I.ColourID " +
                    "Where S.StyleType like '" + Gender + "' " +
-                   "And SD.Name like '%"+search+"%'";
+                   "And SD.Name like '%"+search+"%' ";
             }
             if (sort == "DESC")
             {
@@ -118,7 +118,6 @@ namespace XC_Shoes.Connects
                 emp.NameColor = rdr.GetValue(3).ToString();
                 emp.Price = float.Parse(rdr.GetValue(4).ToString());
                 emp.Discount = float.Parse(rdr.GetValue(5).ToString());
-
                 emp.Url = rdr.GetValue(6).ToString();
                 emp.StyleType = rdr.GetValue(7).ToString();
                 list.Add(emp);

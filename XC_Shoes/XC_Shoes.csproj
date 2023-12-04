@@ -121,7 +121,10 @@
     <Content Include="Content\admin_site.css" />
     <Content Include="Content\API_GoogleDrive.js" />
     <Content Include="Content\site.css" />
-    <Content Include="Databases\DB_ShoesStore.sql" />
+    <Content Include="Databases\DB_XC_Insert.sql" />
+    <Content Include="Databases\DB_XC_Select.sql" />
+    <Content Include="Databases\DB_XC_Shoes_Store.sql" />
+    <Content Include="Databases\DB_XC_Trigger&amp;StoreProcedure&amp;Function.sql" />
     <Content Include="Global.asax" />
     <Content Include="Resources\Account\User.jpg" />
     <Content Include="Resources\Account\z4263646737653_b71c2a8b1f0f08aedc2b8fb8c85dfe12.jpg" />
@@ -205,14 +208,14 @@
     <Content Include="Resources\Shoes\JD1-Men-3\z4937397967617_40a141cf098e7fd39ec30dc54b1a3143-AVT.jpg" />
     <Content Include="Resources\Shoes\JD1-Men-3\z4937397967617_40a141cf098e7fd39ec30dc54b1a3143.jpg" />
     <Content Include="Resources\Shoes\JD1-Men-3\z4937397971992_7f25e3a1a8d56aae9d03eb3dc713843f.jpg" />
-    <Content Include="Resources\Shoes\JD2-Men-2\z4937398065622_a86b86e4f4fd806eb75bb483393d2f59.jpg" />
-    <Content Include="Resources\Shoes\JD2-Men-2\z4937398065624_84b28aef2cd92c463548188f1ad199d8.jpg" />
-    <Content Include="Resources\Shoes\JD2-Men-2\z4937398066419_6a3a616edc4e92ac10dadedaefb665ef-AVT.jpg" />
-    <Content Include="Resources\Shoes\JD2-Men-2\z4937398066419_6a3a616edc4e92ac10dadedaefb665ef.jpg" />
     <Content Include="Resources\Shoes\JD2-Men-6\z4938646419524_dfa663978de232394badd9b0a3c055e2-AVT.jpg" />
     <Content Include="Resources\Shoes\JD2-Men-6\z4938646419524_dfa663978de232394badd9b0a3c055e2.jpg" />
     <Content Include="Resources\Shoes\JD2-Men-6\z4938646422717_88b9cfbcb57188f4a671d7d405f47f44.jpg" />
     <Content Include="Resources\Shoes\JD2-Men-6\z4938646441120_5158795a3395dbd51bb387a9c7cb0ea2.jpg" />
+    <Content Include="Resources\Shoes\JD2-Men-2\z4937398065622_a86b86e4f4fd806eb75bb483393d2f59.jpg" />
+    <Content Include="Resources\Shoes\JD2-Men-2\z4937398065624_84b28aef2cd92c463548188f1ad199d8.jpg" />
+    <Content Include="Resources\Shoes\JD2-Men-2\z4937398066419_6a3a616edc4e92ac10dadedaefb665ef-AVT.jpg" />
+    <Content Include="Resources\Shoes\JD2-Men-2\z4937398066419_6a3a616edc4e92ac10dadedaefb665ef.jpg" />
     <Content Include="Resources\Shoes\JD2-Men-7\z4937399248647_6a1897868f70e722c01560c819bf6359.jpg" />
     <Content Include="Resources\Shoes\JD2-Men-7\z4937399258144_27966977f33eb437e7bdc03ae6d8c450-AVT.jpg" />
     <Content Include="Resources\Shoes\JD2-Men-7\z4937399258144_27966977f33eb437e7bdc03ae6d8c450.jpg" />
@@ -273,6 +276,8 @@
     <Compile Include="Connects\ConnectBag.cs" />
     <Compile Include="Connects\ConnectFavorite.cs" />
     <Compile Include="Connects\ConnectIcons.cs" />
+    <Compile Include="Connects\ConnectOrders.cs" />
+    <Compile Include="Connects\ConnectPurchased.cs" />
     <Compile Include="Connects\ConnectShoes.cs" />
     <Compile Include="Connects\ConnectSize.cs" />
     <Compile Include="Connects\ConnectTypeShoes.cs" />
@@ -289,7 +294,10 @@
     <Compile Include="Models\Bag.cs" />
     <Compile Include="Models\Favorite.cs" />
     <Compile Include="Models\Icons.cs" />
-    <Compile Include="Models\Size.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetails.cs" />
+    <Compile Include="Models\OrderSystem.cs" />
+    <Compile Include="Models\Purchased.cs" />
     <Compile Include="Models\TypeShoes.cs" />
     <Compile Include="Models\Shoe.cs" />
     <Compile Include="Models\User.cs" />
@@ -298,8 +306,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <Content Include="Databases\DB_ShoesStore.bacpac" />
     <Content Include="Credentials\credentials.json" />
+    <Content Include="Databases\DB_XC_Shoes_Store.bacpac" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\AdminHeader.cshtml" />
     <Content Include="Views\Shared\AdminLayoutPage.cshtml" />
@@ -312,13 +320,11 @@
     <Content Include="Views\Shoes\TypeShoesPartial.cshtml" />
     <Content Include="Views\Shoes\IconsPartial.cshtml" />
     <Content Include="Views\Admin\ManageProduct.cshtml" />
-    <Content Include="Views\User\ShowHomePage.cshtml" />
-    <Content Include="Views\User\ShowShoesDetail.cshtml" />
-    <Content Include="Views\Bag\ShowBagPage.cshtml" />
-    <Content Include="Views\User\SignUp.cshtml" />
-    <Content Include="Views\User\SignIn.cshtml" />
-    <Content Include="Views\User\UserProfile.cshtml" />
-    <Content Include="Views\Favorite\ShowFavoritePage.cshtml" />
+    <Content Include="Views\Admin\ManageUser.cshtml" />
+    <Content Include="Views\Admin\ManageAdmin.cshtml" />
+    <Content Include="Views\Admin\MyAccount.cshtml" />
+    <Content Include="Views\Admin\ManageOrder.cshtml" />
+    <Content Include="Views\Admin\Home.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

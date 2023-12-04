@@ -36,23 +36,23 @@ function updateCSS() {
     const contentBoxElements = document.querySelector(".content-box");
     if (contentBoxElements) {
         const cardElements = contentBoxElements.querySelectorAll(".card");
-        const homeChartBox = document.querySelector(".home-chart-box");
+        //const homeChartBox = document.querySelector(".home-chart-box");
         if (window.innerWidth >= 768) {
             cardElements.forEach(function (card) {
                 card.classList.toggle("flex-row");
             });
-            if (homeChartBox) {
-                homeChartBox.style.display = "block";
-            }
+            //if (homeChartBox) {
+            //    homeChartBox.style.display = "block";
+            //}
         }
         else {
             contentBoxElements.style.padding = "0 1rem";
             cardElements.forEach(function (card) {
                 card.classList.toggle("flex-column");
             });
-            if (homeChartBox) {
-                homeChartBox.style.display = "none";
-            }
+            //if (homeChartBox) {
+            //    homeChartBox.style.display = "none";
+            //}
         }
     }
 
